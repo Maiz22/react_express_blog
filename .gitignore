@@ -25,3 +25,4 @@ dist-ssr
 
 #ENV
 .env
+enpoint_tests.rest

@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 1rem;
+}
+
+header {
+    position: sticky;
+    width: 100vw;
+    height: 72px;
+    box-shadow: 1px 1px 8px -1px #1a1b1c1a;
+}
+
+nav {
+    grid-column: 2 / 10;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    opacity: 0.8;
+    letter-spacing: -1px;
+    margin: 0 1rem;
+    font-size: 26px;
+    font-weight: 600;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links li {
+    margin: 0 1rem;
 }
 
-.card {
-  padding: 2em;
+.nav-link {
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: all 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+    color: white;
+    opacity: 0.9;
+    background-color: black;
+    height: 30px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    opacity: 1;
+    color: yellow;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        grid-column: span 10;
+        transition: all 0.4s;
+    }
 }
