@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const entrySchema = new mongoose.Schema({
+const articleSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -16,4 +16,4 @@ const entrySchema = new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('Entry', entrySchema)
+module.exports = mongoose.model('Article', articleSchema)

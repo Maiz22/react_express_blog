@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
     return (
         <header>
@@ -6,24 +8,25 @@ const Navbar = () => {
                     <div className="logo">ExpressReactBlog</div>
                     <ul className="nav-links">
                         <li>
-                            <a className="nav-link" href="#">
+                            <Link to="/" className="nav-link">
                                 New Articles
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="nav-link" href="#">
+                            <Link to="/new" className="nav-link">
+                                Create Article
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/about" className="nav-link">
                                 About
-                            </a>
+                            </Link>
                         </li>
+
                         <li>
-                            <a className="nav-link" href="#">
-                                Create Entry
-                            </a>
-                        </li>
-                        <li>
-                            <a className="nav-button" href="#">
+                            <Link to="/join" className="nav-button">
                                 Join free
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

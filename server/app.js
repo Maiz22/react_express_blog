@@ -5,6 +5,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const express = require('express')
 const app = express()
+const config = require('./config')
 
 //cross origin resource sharing to allow react side to get access
 const cors = require('cors')
@@ -14,10 +15,10 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 //import port from config
-const port = require('./config').port
+const port = config.port
 
 //setup mongo db
-const databaseUrl = require('./config').databaseUrl
+const databaseUrl = config.databaseUrl
 mongoose.connect(databaseUrl)
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
@@ -25,14 +26,15 @@ db.once('open', () => console.log('Connected to DB'))
 
 //import routers from routes
 const indexRouter = require('./routes/index')
-const entriesRouter = require('./routes/entries')
+const articlesRouter = require('./routes/articles')
 
 //allows our server to accept json input
 app.use(express.json())
 
 //include routers
-app.use('', indexRouter)
-app.use('/entries', entriesRouter)
+const API_BASE = `/api/${config.apiVersion}`
+app.use(API_BASE, indexRouter)
+app.use(`${API_BASE}/articles`, articlesRouter)
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
