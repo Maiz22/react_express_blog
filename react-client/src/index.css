@@ -28,3 +28,8 @@ textarea:focus {
 .std-link {
     color: rgb(38, 0, 255);
 }
+
+hr {
+    opacity: 0.2;
+    margin: 2rem 0 4rem 0;
+}

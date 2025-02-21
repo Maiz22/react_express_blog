@@ -35,9 +35,9 @@ route.get('/', async (req, res) => {
 
 //POST/CREATE new article
 route.post('/new/', async (req, res) => {
+    console.log(req.body)
     const article = new Article({
-        title: req.body.title,
-        description: req.body.description,
+        content: req.body.content,
     })
     try {
         const newArticle = await article.save()
@@ -50,6 +50,16 @@ route.post('/new/', async (req, res) => {
 //GET single article
 route.get('/:id', getArticleById, (req, res) => {
     res.json(res.article)
+})
+
+//DELETE single article
+route.delete('/:id', getArticleById, async (req, res) => {
+    try {
+        const response = await Article.findOneAndDelete({ _id: req.params.id })
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 module.exports = route

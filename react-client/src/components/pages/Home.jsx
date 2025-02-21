@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import MarkdownRenderer from '../MarkdownRenderer'
 
 const Home = () => {
     //define our article state
@@ -9,9 +10,8 @@ const Home = () => {
     useEffect(() => {
         const fetchArticle = async () => {
             try {
-                const url = 'http://localhost/5000/api/v1/articles'
+                const url = 'http://localhost:5000/api/v1/articles'
                 const response = await axios.get(url)
-                console.log(response.data)
                 setArticle(response.data)
             } catch (error) {
                 console.log('Error fetching article data:', error)
@@ -24,12 +24,28 @@ const Home = () => {
     return (
         <div className="container">
             <div className="content">
-                <h1>New articles</h1>
+                <h1 className="h-top">New articles</h1>
                 <p>Browse threw the newest articles.</p>
+                <div>
+                    {articles.length > 0 ? (
+                        <MarkdownRenderer
+                            markdownText={articles[articles.length - 1].content}
+                        />
+                    ) : (
+                        <div>No content available</div>
+                    )}
+                </div>
                 <ul className="all-articles">
                     {articles.length > 0 ? (
                         articles.map((article) => (
-                            <li key={article.id}>{article.title}</li>
+                            <li key={article._id}>
+                                <hr />
+                                {
+                                    <MarkdownRenderer
+                                        markdownText={article.content}
+                                    />
+                                }
+                            </li>
                         ))
                     ) : (
                         <li className="no-articles">

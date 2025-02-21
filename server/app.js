@@ -10,7 +10,7 @@ const config = require('./config')
 //cross origin resource sharing to allow react side to get access
 const cors = require('cors')
 const corsOptions = {
-    origin: 'http://localhost:5137',
+    origin: 'http://localhost:5173',
 }
 app.use(cors(corsOptions))
 
