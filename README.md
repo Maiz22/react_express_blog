@@ -9,6 +9,7 @@ Below is a brief overview of the project structure and a guide on how to get sta
 
 ### Structure
 To set up the project, create two directories: a "react-client" directory to hold all the front-end logic, and a "server" directory for the server-side code. The build tool "Vite" is used to set up the React frontend with the following command: `npm create vite@latest`. Vite provides a basic project structure, making it easy to get started with development.
+On client side we have a "src" and a "public" directory
 ```
 react_express_app/
 ├── react-client/
