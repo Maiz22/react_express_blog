@@ -3,13 +3,27 @@ This is a full-stack web application that allows users to view and create blogs 
 
 Below is a brief overview of the project structure and a guide on how to get started with creating a similar project.
 
-### Preconditions:
+### Preconditions
 - Node.js needs to be installed
 - MongoDB needs to be installed
 
 ### Structure
 To set up the project, create two directories: a "react-client" directory to hold all the front-end logic, and a "server" directory for the server-side code. The build tool "Vite" is used to set up the React frontend with the following command: `npm create vite@latest`. Vite provides a basic project structure, making it easy to get started with development.
-On client side we have a "src" and a "public" directory
+
+**Client-Side Structure**
+
+On the client side, we have basic configuration files, the base HTML file (index.html), and two main directories: src and public.
+The src directory contains the React entry point (main.jsx), all React components along with their corresponding .css files, and a static directory for static assets used within the React application.
+The public directory stores static files that are served directly by the web server to the index.html file. These files do not go through the React build process and can include assets such as images, fonts, and icons.
+
+**Server-Side Structure**
+
+On the server side, we have the main application file (app.js), a configuration file (config.js), and three key directories:
+- models: Contains all Mongoose schemas and models used to interact with the MongoDB database. Each model defines the structure of a specific collection in the database.
+- routes: Handles server-side routing by defining API endpoints. Each route typically maps HTTP requests (GET, POST, PUT, DELETE) to specific controller functions.
+- services: Contains additional server-side functionalities, such as sending newsletter emails, handling authentication (if implemented later), or other background tasks.
+
+This structure helps maintain a clean separation of concerns, making the codebase more modular and easier to scale.
 ```
 react_express_app/
 ├── react-client/
@@ -38,7 +52,7 @@ react_express_app/
 
 ```
 
-### Node Modules:
+### Node Modules
   1) **Front-End ("react-client"):**
       - react: A JavaScript library for building user interfaces with components.
       - react-dom: The package that enables React to render components in the DOM.
