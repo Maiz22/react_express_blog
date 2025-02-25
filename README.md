@@ -1,6 +1,7 @@
 # React Express Blog
 This is a full-stack web application that allows users to view and create blogs using Markdown, as well as sign up for a newsletter to stay updated on newly published content. The project was developed for educational purposes, aimed at gaining hands-on experience with Express.js and React.js. Please note that it is not intended for use as a fully functional blog, as authentication and authorization features have not yet been implemented.
 
+## Project Structure and Setup
 Below is a brief overview of the project structure and a guide on how to get started with creating a similar project.
 
 ### Preconditions
@@ -70,3 +71,12 @@ react_express_app/
       - nodemon: A tool that automatically restarts a Node.js application when file changes are detected. (development)
   
 To install the modules navigate to the coresponding directory (server/react-client) and use the node package manager with the following command `npm i <package-name>`. If you download this repository you can also just run `npm install` to install all modules from the package.json file.
+
+## Functional Scope
+1) "Index" or "Home" view displaying all blog articles, sorted from newest to oldest. ![Screenshot 2025-02-25 183458](https://github.com/user-attachments/assets/49bb53f1-fb67-4d67-8d49-da7c6d2e7516)
+
+2) "New Article" view featuring a text field where users can write in Markdown and see a live preview of the formatted content as they type. ![Screenshot 2025-02-25 183637](https://github.com/user-attachments/assets/cf0482e8-74ef-4602-a2a0-fcfc424fc091)
+
+3) "About" view providing a brief overview of the purpose and goals of the web application. ![image](https://github.com/user-attachments/assets/7c79d909-33bf-4376-b78a-c84e8ea06af8)
+
+4) "Join" view where a user can sign up to a newsletter. ![image](https://github.com/user-attachments/assets/70aa9be2-ec35-4017-817f-1049aafec9e0)
