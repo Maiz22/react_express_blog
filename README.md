@@ -1,11 +1,14 @@
 # React Express Blog
-This is a brief description on how to create this blog using Express.js in the backend and React.js with the Vite building tool on client side.
+This is a full-stack web application that allows users to view and create blogs using Markdown, as well as sign up for a newsletter to stay updated on newly published content. The project was developed for educational purposes, aimed at gaining hands-on experience with Express.js and React.js. Please note that it is not intended for use as a fully functional blog, as authentication and authorization features have not yet been implemented.
+
+Below is a brief overview of the project structure and a guide on how to get started with creating a similar project.
+
 ### Preconditions:
 - Node.js needs to be installed
 - MongoDB needs to be installed
 
 ### Structure
-To setup the project you create 2 directories. A "react-client" directory holding all the front-end logic and a "server" directory containing the server side code. The building tool "vite" is used to setup the react frontend with the following command `npm create vite@latest`. Vite provides you with a basic structure, making it easy to start developing. 
+To set up the project, create two directories: a "react-client" directory to hold all the front-end logic, and a "server" directory for the server-side code. The build tool "Vite" is used to set up the React frontend with the following command: `npm create vite@latest`. Vite provides a basic project structure, making it easy to get started with development.
 ```
 react_express_app/
 ├── react-client/
