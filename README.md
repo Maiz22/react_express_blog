@@ -1,4 +1,4 @@
-# React Express Blog
+# [React Express Blog](https://github.com/Maiz22/react_express_blog)
 This is a full-stack web application that allows users to view and create blogs using Markdown, as well as sign up for a newsletter to stay updated on newly published content. The project was developed for educational purposes, aimed at gaining hands-on experience with Express.js and React.js. Please note that it is not intended for use as a fully functional blog, as authentication and authorization features have not yet been implemented.
 
 ## Project Structure and Setup
